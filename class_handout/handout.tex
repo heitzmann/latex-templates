@@ -62,7 +62,12 @@
 
 \pagestyle{plain}
 
+\newcounter{problemcounter}
+\newcommand{\problem}[1]{\stepcounter{problemcounter}{\small\bfseries Questão \theproblemcounter\ (#1)\hspace{.7em}}}
+
 \newcommand{\answerbox}[2]{\framebox[#1]{\rule{0pt}{#2}}}
+
+\renewcommand{\labelenumi}{\alph{enumi}.}
 
 \begin{document}
 
@@ -76,19 +81,38 @@
 
 \begin{center}
 
-{\scshape\Large Título do Roteiro\par}
+{\scshape\Large Título\par}
 
 {\itshape Nome dos Autores, data, etc.\par}
 
-\end{center}
+\vskip \baselineskip
+
+{\large Nome: \hrulefill\hspace{1em}{\small RA}: \rule{25mm}{0.4pt}}
 
 \vskip \baselineskip
 
-Grupo (nome e {\small RA}):\\
-\answerbox{\linewidth}{25mm}
+\begin{minipage}{10cm}
+\itshape\small\emph{Instruções:} Resolva todas as questões.
+Mostre todo o seu trabalho e considerações feitas.
+Inclua unidades apropriadas para todas as respostas e direções para grandezas vetoriais.
+Integridade acadêmica é esperada de todos.
+\end{minipage}
+
+\end{center}
+
+%Grupo (nome e {\small RA}):\\\answerbox{\linewidth}{25mm}
 
 \section*{Introdução}
 
 Texto do roteiro.
+
+\problem{2,5} Exemplo de questão com cabeçalho.
+
+\problem{3,0} Outra questão:
+
+\begin{enumerate}
+\item Primeiro item
+\item Segundo item
+\end{enumerate}
 
 \end{document}
