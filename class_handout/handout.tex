@@ -1,0 +1,94 @@
+% vi: fileencoding=utf-8 spelllang=pt_br spell
+\documentclass[a4paper,11pt]{article}
+
+\usepackage{microtype}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\usepackage[brazil]{babel}
+
+\usepackage[bookmarks=true]{hyperref}
+\hypersetup{pdftitle={},
+    pdfauthor={}
+    pdfkeywords={},
+    bookmarksnumbered,
+    breaklinks=true,
+    urlcolor=blue,
+    citecolor=black,
+    colorlinks=true,
+    linkcolor=black}
+
+\usepackage{lmodern}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{textcomp}
+
+\usepackage{cite}
+
+\usepackage[per-mode=symbol,output-decimal-marker={,}]{siunitx}
+
+\usepackage{booktabs}
+
+\usepackage{graphicx}
+\graphicspath{{figures/}}
+ 
+\usepackage{pgfgantt}
+
+\usepackage[a4paper,
+	textwidth=150mm,
+	headsep=10mm,
+	headheight=5mm,
+	top=20mm,
+	bottom=20mm
+]{geometry}
+
+\usepackage{fancyhdr}
+\renewcommand\headrule{}
+
+\fancypagestyle{plain}{
+\fancyhf{}
+\fancyfoot[C]{\thepage}
+}
+
+\usepackage{parskip}
+
+\usepackage{setspace}
+\onehalfspacing
+%\doublespacing
+
+%\usepackage{indentfirst}
+%\setlength{\parindent}{2em}
+
+\pagestyle{plain}
+
+\newcommand{\answerbox}[2]{\framebox[#1]{\rule{0pt}{#2}}}
+
+\begin{document}
+
+\noindent\raisebox{-1mm}{\makebox[0pt][l]{\includegraphics[height=14.5mm]{unicamp-logo}}}%
+\parbox[b]{\textwidth}{\centering\sffamily%
+{\bfseries\fontsize{15.5pt}{1em}\selectfont\uppercase{Universidade Estadual de Campinas}}\\
+\fontsize{11.3pt}{1.2em}\selectfont\uppercase{Faculdade de Engenharia Elétrica e de Computação}\\
+\uppercase{EX000 -- Nome da disciplina}}
+
+\vskip 2\baselineskip
+
+\begin{center}
+
+{\scshape\Large Título do Roteiro\par}
+
+{\itshape Nome dos Autores, data, etc.\par}
+
+\end{center}
+
+\vskip \baselineskip
+
+Grupo (nome e {\small RA}):\\
+\answerbox{\linewidth}{25mm}
+
+\section*{Introdução}
+
+Texto do roteiro.
+
+\end{document}
