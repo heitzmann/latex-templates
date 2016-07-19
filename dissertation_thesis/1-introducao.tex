@@ -1,41 +1,111 @@
 \chapter{Introdução}
+\label{cap:intro}
 
-Texto introdutório.
+Esse documento contém apenas exemplos simples.
+Mais informações podem ser encontradas, por exemplo, em~\cite{oetiker_not_2015,latex_wikibook}.
 
-O pacote \emph{siunitx} é utilizado para possibilitar a inserção de números e unidades corretamento formatados: \SI{-1.2e-3}{\celsius/m^2}.
-A formatação também funciona em equações, como mostrado em~(\ref{eq:angles}).
+
+\section{Exemplos}
+
+Apresentamos nas subseções seguintes diversos exemplos de elementos textuais.
+
+
+\subsection{Referências}
+
+Partes do texto podem ser referenciadas automaticamente através de um \emph{label}+\emph{ref}, como o capítulo~\ref{cap:intro} ou a seção~\ref{ssec:math}.
+
+
+\subsection{Listas}
+
+Não ordenadas:
+
+\begin{itemize}
+	\item Item 1
+	\item Item 2
+\end{itemize}
+
+Ordenadas:
+
+\begin{enumerate}
+	\item Primeiro item
+	\begin{enumerate}
+		\item Subitem 1
+		\item Subitem 2
+	\end{enumerate}
+	\item Segundo item
+	\item Terceiro item
+\end{enumerate}
+
+
+\subsection{Expressões matemáticas}
+\label{ssec:math}
+
+Expressões podem aparecer em linha com o texto, por exemplo $k = \omega \sqrt{\mu \epsilon}$, ou isoladas:
 
 \begin{equation}
-\label{eq:angles}
-\SI{2\pi}{rad} = \SI{360}{\degree}
+\label{eq:root}
+x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
 \end{equation}
 
-Aproveitamos para fazer refência à fig.~\ref{fig:logo} e às fontes~\cite{oetiker_not_2015, latex_wikibook}.
+Podemos referenciar~(\ref{eq:root}) porque demos um nome a essa equação.
+
+Conjuntos de equações alinhadas, como em:
+%
+\begin{align}
+\vec{F} &= m \vec{a} \\
+\vec{a} &= \frac{{\rm d}\vec{v}}{{\rm d}t}
+\end{align}
+%
+podem e devem ser também utilizados.
+Note que as equações fazem parte da sentença, então não há identação ou uso de inicial maiúscula no texto que as procede.
+
+Exemplo sem numeração:
+
+\begin{equation*}
+z_n = \left[\frac{z_{n-1}^2}{\tan\theta} + \log_3(x + y)\right]^{-1},\qquad\text{para } n \in \mathbb{Z}_+
+\end{equation*}
+
+
+\subsubsection{Grandezas numéricas}
+
+Grandeza com unidades usando o pacote \emph{siunitx}: comprimento de \SI{10}{\micro m}, variação de temperatura $\Delta T = \SI{-25}{\celsius}$, e a velocidade da luz $c_0 = \SI{3.0e8}{m/s}$.
+Números sem unidades são formatados também: \num{-12.34e-5}.
+
+
+\section{Objetos flutuantes}
+
+Não se preocupe muito com o posicionamento de figuras e tabelas, mas lembre-se de referenciá-los no texto e incluí-los logo após a primeira referência.
+
+
+\subsection{Figuras}
+
+Neste parágrafo mencionamos a figura~\ref{fig:exemplo}.
+Assim que o parágrafo terminar, incluímos a figura, mas a posição final dela no documento será definida de modo a melhorar a distribuição dos elementos de texto.
 
 \begin{figure}[htpb]
 \centering
-\includegraphics{unicamp-logo}
-\caption{Logotipo da {\small UNICAMP}}
-\label{fig:logo}
+\includegraphics[width=2cm]{exemplo}
+\caption{Descrição desta belíssima figura.}
+\label{fig:exemplo}
 \end{figure}
 
-Por fim um exemplo de tabela limpa, sem poluição visual, pode ser visto na tabela~\ref{t:xxx}.
+
+\subsection{Tabelas}
+
+O posicionamento de tabelas é similar ao de figuras, como visto na tabela~\ref{tab:exemplo}, porém é costume dar preferência para figuras posicionadas no topo da página e tabelas na parte inferior.
 
 \begin{table}[hbpt]
 \centering
-\caption{Legenda da tabela}
-\label{t:xxx}
-\begin{tabular}{lr}
+\caption{Exemplo de tabela limpa --- sem excesso de linhas --- para evitar poluição visual.}
+\label{tab:exemplo}
+\begin{tabular}{lcc}
 \toprule
-Constante & Valor \\
+Condição & Frequência (\si{kHz}) & Resistência (\si{\ohm}) \\
 \midrule
-$\pi$ & \num{3.14159265}\ldots \\
-$c_0$ &	\SI{299792458}{m/s} \\
+Sem controlador & -- & \num{0.8} \\
+Malha aberta & \num{120.1} & \num{45.6} \\
+Malha fechada & \num{119.3} & \num{50.1} \\
 \bottomrule
 \end{tabular}
 \end{table}
-
-\section{Organização da tese}
-
-Primeiro a introdução e por fim a conclusão.
 
