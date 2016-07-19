@@ -1,0 +1,175 @@
+% vi: fileencoding=utf-8 spelllang=en spell
+\documentclass[a4paper,11pt]{article}
+
+\usepackage{microtype}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\usepackage[english]{babel}
+
+\usepackage[bookmarks=true]{hyperref}
+\hypersetup{pdftitle={Title of the Research Proposal},
+    pdfauthor={Author names}
+    pdfkeywords={keyword 1, keyword 2},
+    bookmarksnumbered,
+    breaklinks=true,
+    urlcolor=blue,
+    citecolor=black,
+    colorlinks=true,
+    linkcolor=black}
+
+\usepackage{lmodern}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{textcomp}
+
+\usepackage{cite}
+
+\usepackage[per-mode=symbol]{siunitx}
+
+\usepackage{booktabs}
+
+\usepackage{graphicx}
+\graphicspath{{figures/}}
+ 
+\usepackage{pgfgantt}
+
+\usepackage[a4paper,
+	textwidth=150mm,
+	headsep=10mm,
+	headheight=5mm,
+	top=20mm,
+	bottom=10mm
+]{geometry}
+
+\usepackage{setspace}
+
+\usepackage{parskip}
+
+\usepackage{fancyhdr}
+\renewcommand\headrule{}
+
+\fancypagestyle{plain}{
+\fancyhf{}
+\fancyfoot[C]{\thepage}
+}
+
+\pagestyle{plain}
+
+\begin{document}
+
+\thispagestyle{empty}
+
+\begin{center}
+
+\raisebox{-1mm}{\makebox[0pt][l]{\includegraphics[height=14.5mm]{unicamp-logo}}}%
+\parbox[b]{\textwidth}{\centering\sffamily%
+{\bfseries\fontsize{15.5pt}{1em}\selectfont\uppercase{Universidade Estadual de Campinas}}\\
+\fontsize{11.3pt}{1.2em}\selectfont\uppercase{Faculdade de Engenharia Elétrica e de Computação}\\
+\uppercase{Departamento de Comunicações}}
+
+\vfill
+
+{\scshape\large Research Proposal\par}
+
+\vskip 3\baselineskip
+
+{\LARGE\bfseries Title of the Research Proposal\par}
+
+\vskip 3\baselineskip
+
+Candidate:\\[1ex]
+{\large\bfseries Candidate Name\par}
+
+\vskip 3\baselineskip
+
+Advisor:\\[1ex]
+{\large\bfseries Advisor Name\par}
+
+\end{center}
+
+\vfill
+
+\begin{abstract}
+Abstract text goes here, if needed.
+\end{abstract}
+
+\vskip \baselineskip
+
+{\centering\sffamily\fontsize{9pt}{1em}\selectfont%
+Av. Albert Einstein, 400; 13083-852 Campinas, SP, Brasil\\
+Tel: +55 (19) 3521-3703; Fax: +55 (19) 3289-1395\\
+\url{http://www.fee.unicamp.br}\par}
+
+\newpage
+
+\newgeometry{top=35mm, bottom=20mm}
+
+\section{Introduction}
+
+Main text starts here.
+Figure~\ref{fig:example} is an example figure.
+There is also table~\ref{tab:example} as another example.
+And don't forget to {\small RTFM}~\cite{oetiker_not_2015, latex_wikibook}.
+
+\begin{figure}[htp]
+\centering
+\includegraphics[width=3cm]{example}
+\caption{Example figure}
+\label{fig:example}
+\end{figure}
+
+\begin{table}[hbp]
+\centering
+\caption{Table description.}
+\label{tab:example}
+\begin{tabular}{lcc}
+\toprule
+Condition & Frequency (\si{kHz}) & Resistance (\si{\ohm}) \\
+\midrule
+No controller & -- & \num{0.8} \\
+Open loop & \num{120.1} & \num{45.6} \\
+Closed loop & \num{119.3} & \num{50.1} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Objectives}
+
+\section{Methodology}
+
+\section{Schedule of Activities}
+
+The proposed schedule of activities for the project is presented in the Gantt chart in fig.~\ref{fig:gantt}.
+
+\begin{figure}[thp]
+\centering
+\begin{ganttchart}[
+hgrid=true,
+vgrid=true,
+canvas/.append style={draw=none},
+title/.append style={draw=none},
+title label font=\small,
+bar label font=\small,
+y unit title=5mm,
+y unit chart=6mm,
+x unit=10mm,
+]{1}{6}
+\gantttitle{2015}{2}
+\gantttitle{2016}{4}\\
+\gantttitlelist{1,...,6}{1}\\
+\ganttbar{1.\ Bibliographical research}{1}{1}\\
+\ganttbar{2.\ Design}{2}{3}\\
+\ganttbar{3.\ Experiments}{3}{6}\\
+\end{ganttchart}
+\caption{Schedule of activities in trimesters.}
+\label{fig:gantt}
+\end{figure}
+
+\section{Conclusion}
+
+\bibliographystyle{ieeetr}
+\bibliography{references}
+
+\end{document}

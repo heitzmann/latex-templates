@@ -1,0 +1,41 @@
+\chapter{Introdução}
+
+Texto introdutório.
+
+O pacote \emph{siunitx} é utilizado para possibilitar a inserção de números e unidades corretamento formatados: \SI{-1.2e-3}{\celsius/m^2}.
+A formatação também funciona em equações, como mostrado em~(\ref{eq:angles}).
+
+\begin{equation}
+\label{eq:angles}
+\SI{2\pi}{rad} = \SI{360}{\degree}
+\end{equation}
+
+Aproveitamos para fazer refência à fig.~\ref{fig:logo} e às fontes~\cite{oetiker_not_2015, latex_wikibook}.
+
+\begin{figure}[htpb]
+\centering
+\includegraphics{unicamp-logo}
+\caption{Logotipo da {\small UNICAMP}}
+\label{fig:logo}
+\end{figure}
+
+Por fim um exemplo de tabela limpa, sem poluição visual, pode ser visto na tabela~\ref{t:xxx}.
+
+\begin{table}[hbpt]
+\centering
+\caption{Legenda da tabela}
+\label{t:xxx}
+\begin{tabular}{lr}
+\toprule
+Constante & Valor \\
+\midrule
+$\pi$ & \num{3.14159265}\ldots \\
+$c_0$ &	\SI{299792458}{m/s} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Organização da tese}
+
+Primeiro a introdução e por fim a conclusão.
+

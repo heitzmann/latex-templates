@@ -1,0 +1,124 @@
+% vi: fileencoding=utf-8 spelllang=pt_br spell
+\documentclass[a4paper,12pt,openright,oneside]{book}
+
+\usepackage{microtype}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\usepackage[portuguese]{babel}
+
+\usepackage[bookmarks=true]{hyperref}
+\hypersetup{
+  pdftitle={},
+  pdfauthor={}
+  pdfkeywords={},
+  bookmarksnumbered,
+  breaklinks=true,
+  urlcolor=blue,
+  citecolor=black,
+  colorlinks=true,
+  linkcolor=black
+}
+
+\usepackage{lmodern}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{textcomp}
+
+\usepackage{cite}
+
+\usepackage[per-mode=symbol, output-decimal-marker={,}]{siunitx}
+
+\usepackage{booktabs}
+
+\usepackage{graphicx}
+\graphicspath{{figures/}}
+ 
+\usepackage{pdfpages}
+
+\usepackage{enumitem}
+
+\usepackage[a4paper,
+	top=3cm,
+	bottom=2cm,
+	left=3cm,
+	right=2cm,
+	headsep=1cm,
+	headheight=14.5pt,
+]{geometry}
+
+\usepackage{setspace}
+
+\usepackage{indentfirst}
+\setlength{\parindent}{2cm}
+
+\usepackage{fancyhdr}
+
+\fancypagestyle{plain}{
+\fancyhf{}
+\rhead{\thepage}
+\lhead{\leftmark}
+}
+
+\AtBeginDocument{\addtocontents{toc}{\protect\thispagestyle{empty}}}
+\AtBeginDocument{\addtocontents{lof}{\protect\thispagestyle{empty}}}
+\AtBeginDocument{\addtocontents{lot}{\protect\thispagestyle{empty}}}
+
+\newcommand{\fronttitle}[1]{\begin{center}{\large\bfseries #1}\end{center}\vskip 2\baselineskip}
+\newcommand{\frontitem}[1]{{\small\bfseries #1}}
+
+
+\begin{document}
+
+\renewcommand{\contentsname}{Sumário}
+\renewcommand{\bibname}{Referências}
+
+\pagestyle{empty}
+
+\input{capa}
+
+\cleardoublepage
+\input{rosto}
+
+\includepdf{ficha.pdf}
+
+\cleardoublepage
+\input{aprovacao}
+
+\cleardoublepage
+\input{dedicatoria}
+
+\cleardoublepage
+\input{agradecimentos}
+
+\cleardoublepage
+\input{epigrafe}
+
+\cleardoublepage
+\input{resumo}
+
+\listoffigures
+
+\listoftables
+
+\input{abreviaturas}
+
+\input{simbolos}
+
+\tableofcontents
+
+\onehalfspacing
+
+\input{1-introducao}
+\input{5-conclusao}
+
+\bibliographystyle{ieeetr}
+\bibliography{bibliografia}
+
+\appendix
+
+\input{apendice}
+
+\end{document}
+
