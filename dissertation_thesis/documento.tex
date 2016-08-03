@@ -58,7 +58,6 @@
 \fancypagestyle{plain}{
 \fancyhf{}
 \rhead{\thepage}
-\lhead{\leftmark}
 }
 
 \AtBeginDocument{\addtocontents{toc}{\protect\thispagestyle{empty}}}
@@ -108,6 +107,7 @@
 
 \tableofcontents
 
+\pagestyle{plain}
 \onehalfspacing
 
 \input{1-introducao}
