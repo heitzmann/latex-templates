@@ -1,0 +1,116 @@
+% vi: fileencoding=utf-8 spelllang=pt_br spell
+\documentclass[landscape]{slides}
+
+\usepackage{microtype}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\usepackage[brazil]{babel}
+
+\usepackage[bookmarks=true]{hyperref}
+\hypersetup{pdftitle={},
+    pdfauthor={},
+    pdfkeywords={},
+    bookmarksnumbered,
+    breaklinks=true,
+    urlcolor=blue,
+    citecolor=black,
+    colorlinks=true,
+    linkcolor=black}
+
+\usepackage{lmodern}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{textcomp}
+
+\usepackage{color}
+\definecolor{bg}{rgb}{0.82,0.87,0.94}
+\definecolor{fg}{rgb}{0.21,0.31,0.35}
+\definecolor{c1}{rgb}{0.71,0.,0.}
+\definecolor{c2}{rgb}{0.,0.23,0.43}
+\definecolor{c3}{rgb}{0.,0.57,0.}
+\definecolor{c4}{rgb}{0.73,0.,1.}
+\definecolor{c5}{rgb}{0.5,0.3,0.}
+\definecolor{c6}{rgb}{1.,0.4,0.}
+
+\usepackage{cite}
+
+\usepackage[per-mode=symbol,output-decimal-marker={,}]{siunitx}
+
+\usepackage{booktabs}
+
+\usepackage{graphicx}
+\graphicspath{{figures/}}
+ 
+\usepackage[landscape,
+  %showframe,
+	paperwidth=288mm,
+	textwidth=264mm,
+	paperheight=162mm,
+	top=10mm,
+	bottom=10mm
+]{geometry}
+
+\pagestyle{empty}
+
+\makeatletter
+\let\@topfil\relax
+\makeatother
+
+\newcommand{\stitle}[1]{{\Large\bfseries #1}}
+
+
+\begin{document}
+
+\openup -0.3em
+\parskip=2ex
+
+\begin{slide}
+
+\hfill
+\begin{minipage}[b]{0.6\textwidth}
+\begin{flushright}
+{\small\bfseries\uppercase{Universidade Estadual de Campinas}}\\[-2.9ex]
+{\tiny\uppercase{Faculdade de Engenharia Elétrica e de Computação}}\\[-2.9ex]
+{\tiny\uppercase{EX000 -- Nome da disciplina}}
+\end{flushright}
+\end{minipage}
+\hskip 0.5em
+\includegraphics[height=17mm]{unicamp-logo}
+
+\vfill
+
+\hspace{5em}{\huge\bfseries Título da Apresentação}
+
+\hspace{5.2em}{Nome do autor}
+
+\vfill\vfill
+
+\end{slide}
+
+\begin{slide}
+
+\stitle{Título do slide}
+
+\vfill
+
+Uma \textcolor{c1}{lista} de itens:
+
+\begin{itemize}
+\item Primeiro item
+\item Segundo item
+\item Terceiro item
+\end{itemize}
+
+\colorbox{bg}{E uma equação:}
+
+\begin{equation*}
+i\pi = 2\ln i
+\end{equation*}
+
+\vfill
+
+\end{slide}
+
+\end{document}
