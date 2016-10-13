@@ -11,6 +11,10 @@
 *.cb
 *.cb2
 
+## Beamer auxiliary files:
+*.snm
+*.nav
+
 ## Intermediate documents:
 *.dvi
 *-converted-to.*

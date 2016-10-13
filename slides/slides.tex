@@ -1,30 +1,9 @@
 % vi: fileencoding=utf-8 spelllang=pt_br spell
-\documentclass[landscape]{slides}
+\documentclass[10pt, aspectratio=169]{beamer}
+\usefonttheme[onlymath]{serif}
+\usecolortheme{dove}
+\setbeamertemplate{navigation symbols}{}
 
-\usepackage{microtype}
-
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
-
-\usepackage[brazil]{babel}
-
-\usepackage[bookmarks=true]{hyperref}
-\hypersetup{pdftitle={},
-    pdfauthor={},
-    pdfkeywords={},
-    bookmarksnumbered,
-    breaklinks=true,
-    urlcolor=blue,
-    citecolor=black,
-    colorlinks=true,
-    linkcolor=black}
-
-\usepackage{lmodern}
-\usepackage{amsmath}
-\usepackage{amsfonts}
-\usepackage{textcomp}
-
-\usepackage{color}
 \definecolor{bg}{rgb}{0.82,0.87,0.94}
 \definecolor{fg}{rgb}{0.21,0.31,0.35}
 \definecolor{c1}{rgb}{0.71,0.,0.}
@@ -33,6 +12,22 @@
 \definecolor{c4}{rgb}{0.73,0.,1.}
 \definecolor{c5}{rgb}{0.5,0.3,0.}
 \definecolor{c6}{rgb}{1.,0.4,0.}
+
+\usepackage{microtype}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\usepackage[brazil]{babel}
+
+\hypersetup{pdftitle={},
+    pdfauthor={},
+		pdfkeywords={}}
+
+\usepackage{lmodern}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{textcomp}
 
 \usepackage{cite}
 
@@ -43,93 +38,71 @@
 \usepackage{graphicx}
 \graphicspath{{figures/}}
  
-\usepackage[landscape,
-  %showframe,
-	paperwidth=297mm,
-	textwidth=273mm,
-	paperheight=167mm,
-	top=10mm,
-	bottom=10mm
-]{geometry}
-
-\pagestyle{empty}
-
-\makeatletter
-\let\@topfil\relax
-\makeatother
-
-\newcommand{\stitle}[1]{{\Large\bfseries #1}}
-
-
 \begin{document}
-
-\parskip=2ex
 
 %===============================================================================
 
-\begin{slide}
+\begin{frame}[t]
+
+\vspace{2ex}
 
 \hfill
-\begin{minipage}[b]{0.6\textwidth}
+\begin{minipage}[b]{0.8\textwidth}
 \begin{flushright}
-{\small\bfseries\uppercase{Universidade Estadual de Campinas}}\\[-2.9ex]
-{\tiny\uppercase{Faculdade de Engenharia Elétrica e de Computação}}\\[-2.9ex]
-{\tiny\uppercase{EX000 -- Nome da disciplina}}
+{\small\bfseries\uppercase{Universidade Estadual de Campinas}}\\[-0.6ex]
+{\scriptsize\uppercase{Faculdade de Engenharia Elétrica e de Computação}}\\[-0.6ex]
+{\scriptsize\uppercase{EX000 -- Nome da disciplina}}
 \end{flushright}
 \end{minipage}
 \hskip 0.5em
-\includegraphics[height=17mm]{unicamp-logo}
+\includegraphics[height=5.8ex]{unicamp-logo}
 
-\vspace{40mm}
+\vspace{16ex}
 
 \hspace{5em}{\huge\bfseries Título da Apresentação}
 
 \hspace{5.1em}{Nome do autor}
 
-\end{slide}
+\end{frame}
 
 %===============================================================================
 
-\begin{slide}
-\stitle{Título do slide}
+\begin{frame}{Título do slide}
 
 Uma \textcolor{c1}{lista} de itens:
 
 \begin{itemize}
-\item Primeiro item
+\item Primeiro \colorbox{lightgray}{\color{c1}item}
 \item Segundo item
 \item Terceiro item
 \end{itemize}
 
-\colorbox{bg}{E uma equação:}
-
+E uma equação:
+%
 \begin{equation*}
 i\pi = 2\ln i
 \end{equation*}
 
-\end{slide}
+\end{frame}
 
 %===============================================================================
 
-\begin{slide}
-\stitle{Exemplo em colunas}
+\begin{frame}{Exemplo em colunas}
 
-\begin{minipage}[t][122mm][c]{125mm}
-
+\begin{columns}
+\begin{column}[c]{0.5\textwidth}
 \centering\includegraphics[width=0.8\hsize]{unicamp-logo}
+\end{column}
 
-\end{minipage}%
-\hfill%
-\begin{minipage}[t][122mm][c]{125mm}
-
+\begin{column}[c]{0.5\textwidth}
 \begin{enumerate}
 \item Primeiro ponto
 \item Segundo ponto
 \item Terceiro ponto
 \end{enumerate}
+\end{column}
+\end{columns}
 
-\end{minipage}
-
-\end{slide}
+\end{frame}
 
 \end{document}
