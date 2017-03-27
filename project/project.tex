@@ -24,6 +24,8 @@
 \usepackage{amsfonts}
 \usepackage{textcomp}
 
+\usepackage[smaller, nolist]{acronym}
+
 \usepackage{cite}
 
 \usepackage[per-mode=symbol]{siunitx}
@@ -58,6 +60,7 @@
 }
 
 \pagestyle{plain}
+
 
 \begin{document}
 
@@ -113,7 +116,7 @@ Tel: +55 (19) 3521-3703; Fax: +55 (19) 3289-1395\\
 Main text starts here.
 Figure~\ref{fig:example} is an example figure.
 There is also table~\ref{tab:example} as another example.
-And don't forget to {\small RTFM}~\cite{oetiker_not_2015, latex_wikibook}.
+And don't forget to \ac{RTFM}~\cite{oetiker_not_2015, latex_wikibook}.
 
 \begin{figure}[htp]
 \centering
@@ -173,5 +176,9 @@ x unit=10mm,
 
 \bibliographystyle{ieeetr}
 \bibliography{references}
+
+\begin{acronym}
+\acro{RTFM}{read the freaking manual}
+\end{acronym}
 
 \end{document}
