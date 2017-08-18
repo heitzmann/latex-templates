@@ -27,6 +27,7 @@
 \usepackage{textcomp}
 
 \usepackage[printonlyused,smaller]{acronym}
+\renewcommand*\aclabelfont[1]{\textnormal{\acsfont{#1}}}
 
 \usepackage{cite}
 
@@ -55,14 +56,25 @@
 \usepackage{setspace}
 
 \usepackage{indentfirst}
-\setlength{\parindent}{2cm}
+\setlength{\parindent}{4em}
 
 \usepackage{fancyhdr}
 
-\fancypagestyle{plain}{
-\fancyhf{}
-\rhead{\thepage}
-}
+\fancypagestyle{plain}{\fancyhf{}\rhead{\thepage}}
+
+%\usepackage{titlesec}
+%\titleformat{\chapter}[display]
+%	{\normalfont\sffamily\bfseries\LARGE}
+%	{\chaptertitlename\ \thechapter}
+%	{3ex}{\Huge}{}
+%\titleformat{\section}
+%	{\normalfont\sffamily\bfseries\Large}
+%	{\thesection}
+%	{1em}{}{}
+%\titleformat{\subsection}
+%	{\normalfont\sffamily\bfseries\large}
+%	{\thesubsection}
+%	{1em}{}{}
 
 \AtBeginDocument{\addtocontents{toc}{\protect\thispagestyle{empty}}}
 \AtBeginDocument{\addtocontents{lof}{\protect\thispagestyle{empty}}}
