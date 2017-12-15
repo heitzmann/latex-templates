@@ -29,8 +29,11 @@
 
 \usepackage{cite}
 
-\usepackage[per-mode=symbol,output-decimal-marker={,}]{siunitx}
-%\usepackage[per-mode=symbol]{siunitx}
+\usepackage[
+	per-mode=symbol,
+	output-decimal-marker={,},
+	separate-uncertainty=true,
+]{siunitx}
 
 \usepackage{booktabs}
 \usepackage{caption} 
@@ -159,8 +162,8 @@ z_n = \left[\frac{z_{n-1}^2}{\tan\theta} + \log_3(x + y)\right]^{-1},\qquad\text
 
 \subsubsection{Grandezas numéricas}
 
-Grandeza com unidades usando o pacote \emph{siunitx}: comprimento de \SI{10}{\micro m}, variação de temperatura $\Delta T = \SI{-25}{\celsius}$, e a velocidade da luz $c_0 = \SI{3.0e8}{m/s}$.
-Números sem unidades são formatados também: \num{-12.34e-5}.
+Grandeza com unidades usando o pacote \emph{siunitx}: comprimento de \SI{10}{\micro m}, variação de temperatura $\Delta T = \SI{-25(2)}{\celsius}$, e velocidade $c_0 = \SI{3.0e8}{m/s}$.
+Números sem unidades são formatados também: \num{1.2(3)e4}.
 
 
 \section{Objetos flutuantes}
