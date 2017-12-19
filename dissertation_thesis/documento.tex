@@ -26,8 +26,10 @@
 \usepackage{amsfonts}
 \usepackage{textcomp}
 
-\usepackage[printonlyused,smaller]{acronym}
-\renewcommand*\aclabelfont[1]{\textnormal{\acsfont{#1}}}
+\usepackage{relsize}
+\usepackage[nomain, acronym]{glossaries}
+\setacronymstyle{long-sm-short}
+\makenoidxglossaries
 
 \usepackage{cite}
 
@@ -87,6 +89,7 @@
 \newcommand{\fronttitle}[1]{\begin{center}{\large\bfseries #1}\end{center}\vskip 2\baselineskip}
 \newcommand{\frontitem}[1]{{\small\bfseries #1}}
 
+\include{abreviaturas}
 
 \begin{document}
 
@@ -118,7 +121,13 @@
 
 \listoftables
 
-\input{abreviaturas}
+\printnoidxglossary[
+	type=acronym,
+	title={Lista de Abreviaturas},
+	nonumberlist=true,
+	style=list,
+]
+\thispagestyle{empty}
 
 \input{simbolos}
 
@@ -128,6 +137,7 @@
 \onehalfspacing
 
 \input{1-introducao}
+
 \input{5-conclusao}
 
 \bibliographystyle{ieeetr}

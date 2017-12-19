@@ -25,7 +25,9 @@
 \usepackage{amsfonts}
 \usepackage{textcomp}
 
-\usepackage[smaller, nolist]{acronym}
+\usepackage{relsize}
+\usepackage[nomain, acronym]{glossaries}
+\setacronymstyle{long-sm-short}
 
 \usepackage{cite}
 
@@ -55,6 +57,8 @@
 %\usepackage{indentfirst}
 %\setlength{\parindent}{4em}
 
+\newacronym{FEEC}{FEEC}{Faculdade de Engenharia Elétrica e de Computação}
+\newacronym{UNICAMP}{UNICAMP}{Universidade Estadual de Campinas}
 
 \begin{document}
 
@@ -100,8 +104,8 @@ Apresentamos nas subseções seguintes diversos exemplos de elementos textuais.
 
 \subsection{Acrônimos}
 
-O pacote \emph{acronym} auxilia na definição e uso de acrônimos, como \ac{FEEC}.
-Por exemplo, \ac{FEEC} já apareceu no texto, mas \ac{UNICAMP} ainda não.
+O pacote \emph{glossaries} auxilia na definição e uso de acrônimos, como \gls{FEEC}.
+Por exemplo, \gls{FEEC} já apareceu no texto, mas \gls{UNICAMP} ainda não.
 
 
 \subsection{Referências}
@@ -206,10 +210,5 @@ Malha fechada & \num{119.3} & \num{50.1} \\
 
 \bibliographystyle{unsrt}
 \bibliography{references}
-
-\begin{acronym}
-\acro{FEEC}{Faculdade de Engenharia Elétrica e de Computação}
-\acro{UNICAMP}{Universidade Estadual de Campinas}
-\end{acronym}
 
 \end{document}
