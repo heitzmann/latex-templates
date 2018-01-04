@@ -28,6 +28,16 @@
 \usepackage{relsize}
 \usepackage[nomain, acronym]{glossaries}
 \setacronymstyle{long-sm-short}
+\newcommand{\newacronymx}[8][]{%
+	\newglossaryentry{#2}{
+	type=\acronymtype,
+	name={{\smaller #3}},
+	sort={#3},
+	first={#4 ({\smaller #3}, \emph{#5})},
+	firstplural={#7 ({\smaller #6}, \emph{#8})},
+	text={{\smaller #3}},
+	plural={{\smaller #6}},
+	description={#4 (\emph{#5})},#1}}
 
 \usepackage{cite}
 
@@ -58,7 +68,7 @@
 %\setlength{\parindent}{4em}
 
 \newacronym{FEEC}{FEEC}{Faculdade de Engenharia Elétrica e de Computação}
-\newacronym{UNICAMP}{UNICAMP}{Universidade Estadual de Campinas}
+\newacronymx{AAL}{AAL}{acrônimo em outra língua}{acronym in another language}{AALs}{acrônimos em outra língua}{acronyms in another language}
 
 \begin{document}
 
@@ -105,7 +115,7 @@ Apresentamos nas subseções seguintes diversos exemplos de elementos textuais.
 \subsection{Acrônimos}
 
 O pacote \emph{glossaries} auxilia na definição e uso de acrônimos, como \gls{FEEC}.
-Por exemplo, \gls{FEEC} já apareceu no texto, mas \gls{UNICAMP} ainda não.
+Por exemplo, \gls{FEEC} já apareceu no texto, mas \gls{AAL} ainda não.
 
 
 \subsection{Referências}

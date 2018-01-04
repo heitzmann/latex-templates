@@ -30,6 +30,16 @@
 \usepackage[nomain, acronym]{glossaries}
 \setacronymstyle{long-sm-short}
 \makenoidxglossaries
+\newcommand{\newacronymx}[8][]{%
+	\newglossaryentry{#2}{
+	type=\acronymtype,
+	name={{\smaller #3}},
+	sort={#3},
+	first={#4 ({\smaller #3}, \emph{#5})},
+	firstplural={#7 ({\smaller #6}, \emph{#8})},
+	text={{\smaller #3}},
+	plural={{\smaller #6}},
+	description={#4 (\emph{#5})},#1}}
 
 \usepackage{cite}
 
