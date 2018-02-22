@@ -9,34 +9,22 @@
 \usepackage[english]{babel}
 
 \usepackage[bookmarks=true]{hyperref}
-\hypersetup{pdftitle={Title of the Research Proposal},
-    pdfauthor={Author names},
-    pdfkeywords={keyword 1, keyword 2},
-    bookmarksnumbered,
-    breaklinks=true,
-    urlcolor=blue,
-    citecolor=black,
-    colorlinks=true,
-    linkcolor=black}
+\hypersetup{
+	pdftitle={Title of the Research Proposal},
+	pdfauthor={Author names},
+	pdfkeywords={keyword 1, keyword 2},
+	bookmarksnumbered,
+	breaklinks=true,
+	urlcolor=blue,
+	citecolor=black,
+	colorlinks=true,
+	linkcolor=black,
+}
 
 \usepackage{lmodern}
 \usepackage{amsmath}
-\usepackage{amsfonts}
+\usepackage{amssymb}
 \usepackage{textcomp}
-
-\usepackage{relsize}
-\usepackage[nomain, acronym]{glossaries}
-\setacronymstyle{long-sm-short}
-\newcommand{\newacronymx}[8][]{%
-	\newglossaryentry{#2}{
-	type=\acronymtype,
-	name={{\smaller #3}},
-	sort={#3},
-	first={#4 ({\smaller #3}, \emph{#5})},
-	firstplural={#7 ({\smaller #6}, \emph{#8})},
-	text={{\smaller #3}},
-	plural={{\smaller #6}},
-	description={#4 (\emph{#5})},#1}}
 
 \usepackage{cite}
 
@@ -67,16 +55,21 @@
 
 \usepackage{parskip}
 
-\usepackage{fancyhdr}
-\renewcommand\headrule{}
-
-\fancypagestyle{plain}{
-\fancyhf{}
-\fancyfoot[C]{\thepage}
-}
-
 \pagestyle{plain}
 
+\usepackage{relsize}
+\usepackage[nomain, acronym]{glossaries}
+\setacronymstyle{long-sm-short}
+\newcommand{\newacronymx}[8][]{%
+	\newglossaryentry{#2}{
+	type=\acronymtype,
+	name={{\smaller #3}},
+	sort={#3},
+	first={#4 ({\smaller #3}, \emph{#5})},
+	firstplural={#7 ({\smaller #6}, \emph{#8})},
+	text={{\smaller #3}},
+	plural={{\smaller #6}},
+	description={#4 (\emph{#5})},#1}}
 
 \newacronym{RTFM}{RTFM}{read the freaking manual}
 \newacronymx{AOL}{AOL}{acronym in another language}{acrônimo em outra língua}{AOLs}{acronyms in another language}{acrônimos em outra língua}
@@ -118,7 +111,7 @@ Advisor:\\[1ex]
 
 \begin{abstract}
 Abstract text goes here, if needed.
-\end{abstract}                         ac
+\end{abstract}
 
 \vskip \baselineskip
 

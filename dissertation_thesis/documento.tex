@@ -18,28 +18,13 @@
   urlcolor=blue,
   citecolor=black,
   colorlinks=true,
-  linkcolor=black
+  linkcolor=black,
 }
 
 \usepackage{lmodern}
 \usepackage{amsmath}
-\usepackage{amsfonts}
+\usepackage{amssymb}
 \usepackage{textcomp}
-
-\usepackage{relsize}
-\usepackage[nomain, acronym]{glossaries}
-\setacronymstyle{long-sm-short}
-\makenoidxglossaries
-\newcommand{\newacronymx}[8][]{%
-	\newglossaryentry{#2}{
-	type=\acronymtype,
-	name={{\smaller #3}},
-	sort={#3},
-	first={#4 ({\smaller #3}, \emph{#5})},
-	firstplural={#7 ({\smaller #6}, \emph{#8})},
-	text={{\smaller #3}},
-	plural={{\smaller #6}},
-	description={#4 (\emph{#5})},#1}}
 
 \usepackage{cite}
 
@@ -75,7 +60,6 @@
 \setlength{\parindent}{4em}
 
 \usepackage{fancyhdr}
-
 \fancypagestyle{plain}{\fancyhf{}\rhead{\thepage}}
 
 %\usepackage{titlesec}
@@ -99,7 +83,23 @@
 \newcommand{\fronttitle}[1]{\begin{center}{\large\bfseries #1}\end{center}\vskip 2\baselineskip}
 \newcommand{\frontitem}[1]{{\small\bfseries #1}}
 
+\usepackage{relsize}
+\usepackage[nomain, acronym]{glossaries}
+\setacronymstyle{long-sm-short}
+\makenoidxglossaries
+\newcommand{\newacronymx}[8][]{%
+	\newglossaryentry{#2}{
+	type=\acronymtype,
+	name={{\smaller #3}},
+	sort={#3},
+	first={#4 ({\smaller #3}, \emph{#5})},
+	firstplural={#7 ({\smaller #6}, \emph{#8})},
+	text={{\smaller #3}},
+	plural={{\smaller #6}},
+	description={#4 (\emph{#5})},#1}}
+
 \include{abreviaturas}
+
 
 \begin{document}
 

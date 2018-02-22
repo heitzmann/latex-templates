@@ -10,34 +10,22 @@
 %\usepackage[english]{babel}
 
 \usepackage[bookmarks=true]{hyperref}
-\hypersetup{pdftitle={Título do trabalho},
-    pdfauthor={Primeiro Autor, Segundo A. Autor, Terceiro B. Autor},
-    pdfkeywords={palavra-chave 1, palavra-chave 2},
-    bookmarksnumbered,
-    breaklinks=true,
-    urlcolor=blue,
-    citecolor=black,
-    colorlinks=true,
-    linkcolor=black}
+\hypersetup{
+	pdftitle={Título do trabalho},
+	pdfauthor={Primeiro Autor, Segundo A. Autor, Terceiro B. Autor},
+	pdfkeywords={palavra-chave 1, palavra-chave 2},
+	bookmarksnumbered,
+	breaklinks=true,
+	urlcolor=blue,
+	citecolor=black,
+	colorlinks=true,
+	linkcolor=black,
+}
 
 \usepackage{lmodern}
 \usepackage{amsmath}
-\usepackage{amsfonts}
+\usepackage{amssymb}
 \usepackage{textcomp}
-
-\usepackage{relsize}
-\usepackage[nomain, acronym]{glossaries}
-\setacronymstyle{long-sm-short}
-\newcommand{\newacronymx}[8][]{%
-	\newglossaryentry{#2}{
-	type=\acronymtype,
-	name={{\smaller #3}},
-	sort={#3},
-	first={#4 ({\smaller #3}, \emph{#5})},
-	firstplural={#7 ({\smaller #6}, \emph{#8})},
-	text={{\smaller #3}},
-	plural={{\smaller #6}},
-	description={#4 (\emph{#5})},#1}}
 
 \usepackage{cite}
 
@@ -54,21 +42,23 @@
 \usepackage{graphicx}
 \graphicspath{{figures/}}
 
-%\usepackage[textwidth=160mm,
-%			textheight=230mm
-%			]{geometry}
-
-\usepackage{parskip}
-
-%\usepackage{setspace}
-%\onehalfspacing
-%\doublespacing
-
-%\usepackage{indentfirst}
-%\setlength{\parindent}{4em}
+\usepackage{relsize}
+\usepackage[nomain, acronym]{glossaries}
+\setacronymstyle{long-sm-short}
+\newcommand{\newacronymx}[8][]{%
+	\newglossaryentry{#2}{
+	type=\acronymtype,
+	name={{\smaller #3}},
+	sort={#3},
+	first={#4 ({\smaller #3}, \emph{#5})},
+	firstplural={#7 ({\smaller #6}, \emph{#8})},
+	text={{\smaller #3}},
+	plural={{\smaller #6}},
+	description={#4 (\emph{#5})},#1}}
 
 \newacronym{FEEC}{FEEC}{Faculdade de Engenharia Elétrica e de Computação}
 \newacronymx{AAL}{AAL}{acrônimo em outra língua}{acronym in another language}{AALs}{acrônimos em outra língua}{acronyms in another language}
+
 
 \begin{document}
 

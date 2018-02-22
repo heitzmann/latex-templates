@@ -9,19 +9,21 @@
 \usepackage[brazil]{babel}
 
 \usepackage[bookmarks=true]{hyperref}
-\hypersetup{pdftitle={},
-    pdfauthor={},
-    pdfkeywords={},
-    bookmarksnumbered,
-    breaklinks=true,
-    urlcolor=blue,
-    citecolor=black,
-    colorlinks=true,
-    linkcolor=black}
+\hypersetup{
+	pdftitle={},
+	pdfauthor={},
+	pdfkeywords={},
+	bookmarksnumbered,
+	breaklinks=true,
+	urlcolor=blue,
+	citecolor=black,
+	colorlinks=true,
+	linkcolor=black,
+}
 
 \usepackage{lmodern}
 \usepackage{amsmath}
-\usepackage{amsfonts}
+\usepackage{amssymb}
 \usepackage{textcomp}
 
 \usepackage{cite}
@@ -39,8 +41,6 @@
 \usepackage{graphicx}
 \graphicspath{{figures/}}
 
-\usepackage{pgfgantt}
-
 \usepackage[a4paper,
 	textwidth=150mm,
 	headsep=10mm,
@@ -49,18 +49,9 @@
 	bottom=20mm
 ]{geometry}
 
-\usepackage{fancyhdr}
-\renewcommand\headrule{}
-
-\fancypagestyle{plain}{
-\fancyhf{}
-\fancyfoot[C]{\thepage}
-}
-
-\usepackage{parskip}
-
 \usepackage{setspace}
 
+\usepackage{parskip}
 %\usepackage{indentfirst}
 %\setlength{\parindent}{2em}
 
@@ -72,6 +63,7 @@
 \newcommand{\answerbox}[2]{\framebox[#1]{\rule{0pt}{#2}}}
 
 \renewcommand{\labelenumi}{\alph{enumi}.}
+
 
 \begin{document}
 
