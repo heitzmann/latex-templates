@@ -1,0 +1,113 @@
+% vi: fileencoding=utf-8 spelllang=en spell
+\documentclass[10pt, aspectratio=169]{beamer}
+
+\usepackage{microtype}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\title{Title of the Presentation}
+%\subtitle{Subtitles are ugly}
+\date{Event Title | month DD, YYYY}
+\author{First Athor \and Second Author \and Third Author}
+\institute{Applied and Computational Electromagnetics Group\\
+School of Electrical and Computer Engineering\\
+University of Campinas – Brazil\\
+\texttt{http://www.decom.fee.unicamp.br/gemac}}
+
+\usetheme{gemac}
+
+\usepackage[english]{babel}
+
+\hypersetup{
+	pdftitle={},
+	pdfauthor={},
+	pdfkeywords={},
+}
+
+\usepackage{lmodern}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{textcomp}
+
+\usepackage{cite}
+
+\usepackage[
+	per-mode=symbol,
+	%output-decimal-marker={,},
+	separate-uncertainty=true,
+]{siunitx}
+
+\usepackage{booktabs}
+
+\usepackage{tikz}
+\usepackage{graphicx}
+\graphicspath{{figures/}}
+
+
+\begin{document}
+
+\titlepage
+
+%===============================================================================
+
+\begin{frame}{Slide title}
+\framesubtitle{Slide subtitle}
+
+An \alert{item} list:
+
+\begin{itemize}
+\item First \colorbox{light blue}{\color{light gray}item}
+\item Second item
+\item Third item
+\end{itemize}
+
+And an equation:
+%
+\begin{equation*}
+i\pi = 2\ln i
+\end{equation*}
+
+\end{frame}
+
+%===============================================================================
+
+\part{Use parts in long presentations}
+\frame{\partpage}
+
+%===============================================================================
+
+\section{Use sections in very long presentations}
+\frame{\sectionpage}
+
+%===============================================================================
+
+\subsection{Stress an important point,\\such as avoiding subsections.}
+\frame{\subsectionpage}
+
+%===============================================================================
+
+\begin{frame}{Exemplo em colunas}
+
+\begin{columns}
+\begin{column}[c]{0.5\textwidth}
+\centering\includegraphics[width=0.8\hsize]{example}
+\end{column}
+
+\begin{column}[c]{0.5\textwidth}
+\begin{enumerate}
+\item Primeiro ponto
+\item Segundo ponto
+\item Terceiro ponto
+\end{enumerate}
+
+\begin{block}{Note:}
+An important conclusion!
+\end{block}
+\end{column}
+\end{columns}
+
+\end{frame}
+
+
+\end{document}
