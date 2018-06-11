@@ -85,7 +85,7 @@
 \newcommand{\frontitem}[1]{{\small\bfseries #1}}
 
 \usepackage{relsize}
-\usepackage[nomain, acronym]{glossaries}
+\usepackage[nomain, acronym, nopostdot]{glossaries}
 \setacronymstyle{long-sm-short}
 \makenoidxglossaries
 \newcommand{\newacronymx}[8][]{%
@@ -93,16 +93,31 @@
 	type=\acronymtype,
 	name={{\smaller #3}},
 	sort={#3},
-	first={#4 ({\smaller #3}, \emph{#5})},
-	firstplural={#7 ({\smaller #6}, \emph{#8})},
+	first={\if\relax\detokenize{#4}\relax%
+			\emph{#5} ({\smaller #3})%
+		\else%
+			#4 ({\smaller #3}, \emph{#5})%
+		\fi},
+	firstplural={\if\relax\detokenize{#7}\relax%
+			\emph{#8} ({\smaller #6})%
+		\else%
+			#7 ({\smaller #6}, \emph{#8})%
+		\fi},
 	text={{\smaller #3}},
 	plural={{\smaller #6}},
-	description={#4 (\emph{#5})},#1}}
+	description={\if\relax\detokenize{#4}\relax%
+			\emph{#5}%
+		\else%
+			#4 (\emph{#5})%
+		\fi},
+		#1}}
 
 \include{abreviaturas}
 
 
 \begin{document}
+
+\glsunsetall
 
 \renewcommand{\contentsname}{Sumário}
 \renewcommand{\bibname}{Referências}
@@ -146,6 +161,8 @@
 
 \pagestyle{plain}
 \onehalfspacing
+
+\glsresetall
 
 \input{1-introducao}
 
