@@ -1,12 +1,12 @@
 % vi: fileencoding=utf-8 spelllang=en spell
-\documentclass[a4paper,11pt]{article}
+\documentclass[english, a4paper,11pt]{article}
 
 \usepackage{microtype}
 
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 
-\usepackage[english]{babel}
+\usepackage{babel}
 
 \usepackage[bookmarks=true]{hyperref}
 \hypersetup{
@@ -25,6 +25,8 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{textcomp}
+
+\usepackage{cleveref}
 
 \usepackage[style=ieee, citestyle=ieee]{biblatex}
 \bibliography{references}
@@ -154,8 +156,8 @@ Tel: +55 (19) 3521-3703; Fax: +55 (19) 3289-1395\\
 \section{Introduction}
 
 Main text starts here.
-Figure~\ref{fig:example} is an example figure.
-There is also table~\ref{tab:example} as another example.
+\Cref{fig:example} is an example figure.
+There is also \cref{tab:example} as another example.
 And don't forget to \gls{RTFM}~\cite{oetiker_not_2015, latex_wikibook}.
 
 \begin{figure}[htp]
@@ -186,7 +188,7 @@ Closed loop & \num{119.3} & \num{50.1} \\
 
 \section{Schedule of Activities}
 
-The proposed schedule of activities for the project is presented in the Gantt chart in fig.~\ref{fig:gantt}.
+The proposed schedule of activities for the project is presented in the Gantt chart in \cref{fig:gantt}.
 
 \begin{figure}[thp]
 \centering

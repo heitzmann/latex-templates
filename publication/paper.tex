@@ -1,13 +1,11 @@
-% vi: fileencoding=utf-8 spelllang=pt_br spell
-\documentclass[a4paper,11pt]{article}
+\documentclass[brazilian, a4paper, 11pt]{article}
 
 \usepackage{microtype}
 
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 
-\usepackage[brazil]{babel}
-%\usepackage[english]{babel}
+\usepackage{babel}
 
 \usepackage[bookmarks=true]{hyperref}
 \hypersetup{
@@ -26,6 +24,8 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{textcomp}
+
+\usepackage{cleveref}
 
 \usepackage[style=ieee, citestyle=ieee]{biblatex}
 \bibliography{references}
@@ -111,7 +111,7 @@ Por exemplo, \gls{FEEC} já apareceu no texto, mas \gls{AAL} ainda não.
 
 \subsection{Referências}
 
-Partes do texto podem ser referenciadas automaticamente através de um \emph{label}+\emph{ref}, como a seção~\ref{sec:intro} ou a subseção~\ref{ssec:math}.
+Partes do texto podem ser referenciadas automaticamente através de um \emph{label}+\emph{ref}, como a \cref{sec:intro} ou a \cref{ssec:math}.
 
 
 \subsection{Listas}
@@ -178,7 +178,7 @@ Não se preocupe muito com o posicionamento de figuras e tabelas, mas lembre-se 
 
 \subsection{Figuras}
 
-Neste parágrafo mencionamos a figura~\ref{fig:exemplo}.
+Neste parágrafo mencionamos a \cref{fig:exemplo}.
 Assim que o parágrafo terminar, incluímos a figura, mas a posição final dela no documento será definida de modo a melhorar a distribuição dos elementos de texto.
 
 \begin{figure}[htpb]
@@ -191,7 +191,7 @@ Assim que o parágrafo terminar, incluímos a figura, mas a posição final dela
 
 \subsection{Tabelas}
 
-O posicionamento de tabelas é similar ao de figuras, como visto na tabela~\ref{tab:exemplo}, porém é costume dar preferência para figuras posicionadas no topo da página e tabelas na parte inferior.
+O posicionamento de tabelas é similar ao de figuras, como visto na \cref{tab:exemplo}, porém é costume dar preferência para figuras posicionadas no topo da página e tabelas na parte inferior.
 
 \begin{table}[hbpt]
 \centering
