@@ -19,7 +19,7 @@ Como exemplos de formas plurais, temos \glspl{CA} ou mesmo \glspl{AAL}.
 
 \subsection{Referências}
 
-Partes do texto podem ser referenciadas automaticamente através de um \emph{label}+\emph{ref}, como o capítulo~\ref{cap:intro} ou a seção~\ref{ssec:math}.
+Partes do texto podem ser referenciadas automaticamente atraves do comando \verb|\cref| desde que possuam um nome (\verb|\label|), como o \cref{cap:intro} ou a \cref{ssec:math}.
 
 
 \subsection{Listas}
@@ -44,49 +44,49 @@ Ordenadas:
 \end{enumerate}
 
 
-\subsection{Expressões matemáticas}
+\subsection{Expressões Matemáticas}
 \label{ssec:math}
 
 Expressões podem aparecer em linha com o texto, por exemplo $k = \omega \sqrt{\mu \epsilon}$, ou isoladas:
-
+%
 \begin{equation}
 \label{eq:root}
 x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
 \end{equation}
 
-Podemos referenciar~\eqref{eq:root} porque demos um nome a essa equação.
+Podemos referenciar \cref{eq:root} porque demos um nome a essa equação (note que não se usa a palavra ``equação'' ao se referenciar equações).
 
 Conjuntos de equações alinhadas, como em:
 %
 \begin{align}
-\vec{F} &= m \vec{a} \\
-\vec{a} &= \frac{{\rm d}\vec{v}}{{\rm d}t}
+\vec{a} &= \frac{\mathrm d\vec{v}}{\mathrm dt} \\
+\vec{v}(t) &= \int_0^t \vec{a}(t') \, \mathrm dt'
 \end{align}
 %
 podem e devem ser também utilizados.
 Note que as equações fazem parte da sentença, então não há identação ou uso de inicial maiúscula no texto que as procede.
 
 Exemplo sem numeração:
-
+%
 \begin{equation*}
 z_n = \left[\frac{z_{n-1}^2}{\tan\theta} + \log_3(x + y)\right]^{-1},\qquad\text{para } n \in \mathbb{Z}_+
 \end{equation*}
 
 
-\subsubsection{Grandezas numéricas}
+\subsection{Grandezas Numéricas}
 
 Grandeza com unidades usando o pacote \emph{siunitx}: comprimento de \SI{10}{\micro m}, variação de temperatura $\Delta T = \SI{-25}{\celsius}$, e a velocidade da luz $c_0 = \SI{3.0e8}{m/s}$.
 Números sem unidades são formatados também: \num{-12.34e-5}.
 
 
-\section{Objetos flutuantes}
+\section{Objetos Flutuantes}
 
-Não se preocupe muito com o posicionamento de figuras e tabelas, mas lembre-se de referenciá-los no texto e incluí-los logo após a primeira referência.
+Não se preocupe muito com o posicionamento de figuras e tabelas, mas lembre-se de referenciá-los no texto e incluí-los, preferencialmente, logo após a primeira referência.
 
 
 \subsection{Figuras}
 
-Neste parágrafo mencionamos a figura~\ref{fig:exemplo}.
+Neste parágrafo mencionamos a \cref{fig:exemplo}.
 Assim que o parágrafo terminar, incluímos a figura, mas a posição final dela no documento será definida de modo a melhorar a distribuição dos elementos de texto.
 
 \begin{figure}[htpb]
@@ -99,19 +99,20 @@ Assim que o parágrafo terminar, incluímos a figura, mas a posição final dela
 
 \subsection{Tabelas}
 
-O posicionamento de tabelas é similar ao de figuras, como visto na tabela~\ref{tab:exemplo}, porém é costume dar preferência para figuras posicionadas no topo da página e tabelas na parte inferior.
+O posicionamento de tabelas é similar ao de figuras, como visto na \cref{tab:exemplo}, porém é costume dar preferência para figuras posicionadas no topo da página e tabelas na parte inferior.
 
 \begin{table}[hbpt]
 \centering
-\caption{Exemplo de tabela limpa --- sem excesso de linhas --- para evitar poluição visual.}
+\caption{Exemplo de tabela sem excesso de linhas.}
 \label{tab:exemplo}
-\begin{tabular}{lcc}
+\begin{tabular}{lSS}
 \toprule
-Condição & Frequência (\si{kHz}) & Resistência (\si{\ohm}) \\
+& {Frequência} & {Resistência} \\
+Condição & {(\si{kHz})} & {(\si{\ohm})} \\
 \midrule
-Sem controlador & -- & \num{0.8} \\
-Malha aberta & \num{120.1} & \num{45.6} \\
-Malha fechada & \num{119.3} & \num{50.1} \\
+Sem controlador & {---} & 0.8 \\
+Malha aberta & 120.1 & 45.6 \\
+Malha fechada & 119.3 & 50.1 \\
 \bottomrule
 \end{tabular}
 \end{table}

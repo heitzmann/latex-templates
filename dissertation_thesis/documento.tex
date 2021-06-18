@@ -1,12 +1,12 @@
-% vi: fileencoding=utf-8 spelllang=pt_br spell
-\documentclass[a4paper,12pt,openright,oneside]{book}
+\documentclass[brazilian, a4paper, 12pt, openright, oneside]{book}
 
 \usepackage{microtype}
 
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 
-\usepackage[brazil]{babel}
+\usepackage{csquotes}
+\usepackage{babel}
 
 \usepackage[bookmarks=true]{hyperref}
 \hypersetup{
@@ -26,7 +26,7 @@
 \usepackage{amssymb}
 \usepackage{textcomp}
 
-\usepackage[style=ieee, citestyle=ieee]{biblatex}
+\usepackage[style=ieee, citestyle=numeric-comp]{biblatex}
 \bibliography{bibliografia}
 
 \usepackage[
@@ -47,8 +47,7 @@
 
 \usepackage{enumitem}
 
-\usepackage[a4paper,
-	top=3cm,
+\usepackage[top=3cm,
 	bottom=2cm,
 	left=3cm,
 	right=2cm,
@@ -56,10 +55,13 @@
 	headheight=14.5pt,
 ]{geometry}
 
+\usepackage{cleveref}
+\crefname{equation}{}{}
+
 \usepackage{setspace}
 
 \usepackage{indentfirst}
-\setlength{\parindent}{4em}
+\setlength{\parindent}{2cm}
 
 \usepackage{fancyhdr}
 \fancypagestyle{plain}{\fancyhf{}\rhead{\thepage}}
